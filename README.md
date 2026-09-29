@@ -30,7 +30,7 @@ graph TD
 - **Domicílios Unipessoais (`Domicilios`)**: Análise demográfica da evolução de residências e domicílios unipessoais ao longo do tempo.
 - **Suporte Social (`SuporteSocial`)**: Visualização de índices globais de suporte e redes de apoio comunitário e familiar.
 - **Tempo Sozinho (`TempoSozinho`)**: Investigação estatística do tempo despendido em solidão por faixa etária e gênero.
-- **TimeEngine (`TimeEngine`)**: Módulo de simulação e navegação temporal analítica avançada.
+- **TimeEngine (`Motor do tempo`)**: Módulo de simulação e navegação temporal analítica avançada.
 - **Experiência Visual & Temas**: Suporte a Dark/Light mode com transições fluidas via Framer Motion e componentes customizados.
 
 ### Backend (Python + Flask)
