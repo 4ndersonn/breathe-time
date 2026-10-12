@@ -113,8 +113,8 @@ export const TempoSozinho: React.FC = () => {
       {loading ? (
         <Skeleton className="h-[500px] w-full rounded-2xl" />
       ) : (
-       <Card className="border-white-100-50 bg-white-100-50 hover:bg-white/5 group cursor-pointer transition-colors duration-300">
-        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-6">
+        <Card>
+          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-6">
             <div>
               <h3 className="text-lg font-semibold tracking-tight">Gráfico Multidimensional de Convivência (6 Séries)</h3>
               <p className="text-xs text-muted-foreground">Ordenado cronologicamente por idade (15 a 80 anos).</p>

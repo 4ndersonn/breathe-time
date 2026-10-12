@@ -257,8 +257,8 @@ export const SuporteSocial: React.FC = () => {
       {/* Main Grid */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
         <div className="lg:col-span-2 space-y-6">
-         <Card className="border-white-100-50 bg-white-100-50 hover:bg-white/5 group cursor-pointer transition-colors duration-300">
-          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-6">
+          <Card>
+            <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-6">
               <div className="flex items-center gap-2">
                 <h3 className="text-lg font-semibold">Países & Regiões ({selectedYear})</h3>
               </div>
@@ -340,8 +340,8 @@ export const SuporteSocial: React.FC = () => {
 
         {/* Rankings Sidebar */}
         <div className="space-y-6">
-        <Card className="border-white-100-50 bg-white-100-50 hover:bg-white/5 group cursor-pointer transition-colors duration-300">
-         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-6">
+          <Card>
+            <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-6">
               <h3 className="font-semibold text-base">Top 5 • Maior Suporte ({selectedYear})</h3>
             </div>
             <div className="space-y-3">
@@ -361,8 +361,8 @@ export const SuporteSocial: React.FC = () => {
             </div>
           </Card>
 
-        <Card className="border-white-100-50 bg-white-100-50 hover:bg-white/5 group cursor-pointer transition-colors duration-300">
-         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-6">
+          <Card>
+            <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-6">
               <h3 className="font-semibold text-base">Top 5 • Menor Suporte ({selectedYear})</h3>
             </div>
             <div className="space-y-3">

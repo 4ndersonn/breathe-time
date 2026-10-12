@@ -32,21 +32,21 @@ export const Navbar: React.FC<NavbarProps> = ({
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo / Brand */}
-          <div 
+         <div 
             className="flex items-center gap-3 cursor-pointer group"
             onClick={() => onTabChange('inicio')}
           >
             <div className="h-10 w-10 rounded-xl from-outline to-outline flex items-center group-hover:scale-5 transition-transform">           
            </div>
             <div>
-             <span 
-  className="block font-semibold text-lg tracking-tight bg-gradient-to-r from-green-400 via-orange-500 to-green-600 bg-clip-text text-transparent"
-  style={{ fontFamily: "'Fira Code', monospace" }}>
-  
-  Breathe Time
-</span>
-  <span className="bg-gradient-to-r from-blue-400 via-cyan-300 to-blue-600 bg-clip-text text-transparent">
-    333
+              <span 
+                className="block font-semibold text-lg tracking-tight bg-gradient-to-r from-green-400 via-orange-500 to-green-600 bg-clip-text text-transparent"
+                style={{ fontFamily: "'Fira Code', monospace" }}
+              >
+                Breathe Time
+              </span>
+              <span className="bg-gradient-to-r from-blue-400 via-cyan-300 to-blue-600 bg-clip-text text-transparent">
+                333
               </span>
             </div>
           </div>

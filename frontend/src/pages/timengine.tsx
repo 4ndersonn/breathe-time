@@ -58,7 +58,7 @@ export const TimeEngine: React.FC = () => {
         <p className="mt-2 text-muted-foreground max-w-2xl">Escolha uma referência de tempo ou insira um valor customizado. Veja o que esses anos representam em cada escala.</p>
       </div>
 
-      <Card className="border-white-100-50 bg-white-100-50 hover:bg-white/5 group cursor-pointer transition-colors duration-300">
+      <Card>
         <div className="flex flex-wrap gap-2">
           {presets.map((preset) => (
             <button
@@ -75,7 +75,7 @@ export const TimeEngine: React.FC = () => {
           ))}
         </div>
 
-        <div className="space-y-3">
+        <div className="space-y-3 mt-4">
           <div className="flex items-center justify-between text-sm font-medium">
             <span>Referência customizada</span>
             <span className="text-primary">{Math.round(years)} anos</span>
@@ -95,7 +95,7 @@ export const TimeEngine: React.FC = () => {
         </div>
       </Card>
 
-      <div className="flex flex-wrap items-center gap-1 rounded-xl border border-border/70 bg-outline/50 p-1.5 w-fit">
+      <div className="flex flex-wrap items-center gap-1 rounded-xl border border-border/70 bg-muted/50 p-1.5 w-fit">
         {units.map((unit) => (
           <button
             key={unit}
@@ -110,9 +110,9 @@ export const TimeEngine: React.FC = () => {
       </div>
 
       {/* Hero number dentro de Card com hover */}
-      <Card className="border-white-100-50 bg-white-100-50 hover:bg-white/5 hover:-translate-y-1 hover:shadow-md transition-all duration-300 cursor-default py-10 text-center">
+      <Card className="py-10 text-center">
         <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">{activeUnit}</span>
-        <div className="mt-3 font-mono text-4xl font-whitebold tracking-tight sm:text-6xl">
+        <div className="mt-3 font-mono text-4xl font-whitebold tracking-tight sm:text-6xl text-foreground">
           {formatNumber(conversions[activeUnit])}
         </div>
         <p className="mt-3 text-sm text-muted-foreground">em {Math.round(years)} anos</p>
@@ -120,9 +120,9 @@ export const TimeEngine: React.FC = () => {
 
       <section className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {units.map((unit) => (
-          <Card key={unit} className="border-white-100-50 bg-white-100-50 hover:bg-white/5 group cursor-pointer transition-colors duration-300">
+          <Card key={unit}>
             <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">{unit}</span>
-            <div className="mt-2 text-2xl font-semibold tracking-tight">{abbreviateNumber(conversions[unit])}</div>
+            <div className="mt-2 text-2xl font-semibold tracking-tight text-foreground">{abbreviateNumber(conversions[unit])}</div>
             <p className="mt-1 text-xs text-muted-foreground">{formatNumber(conversions[unit])}</p>
           </Card>
         ))}
@@ -134,8 +134,8 @@ export const TimeEngine: React.FC = () => {
         <p>Seu coração bateria aproximadamente {formatNumber(beats)} vezes, silencioso e constante, sem pedir nada.</p>
       </section>
 
-      <Card className="border-white-100-50 bg-white-100-50 hover:bg-white/5 group cursor-pointer transition-colors duration-300">
-        <label htmlFor="age" className="text-sm font-medium">Quanto desse tempo já passou?</label>
+      <Card>
+        <label htmlFor="age" className="text-sm font-medium block mb-2">Quanto desse tempo já passou?</label>
         <input
           id="age"
           type="number"
@@ -144,7 +144,7 @@ export const TimeEngine: React.FC = () => {
           placeholder="Sua idade"
           value={age}
           onChange={(event) => setAge(event.target.value)}
-          className="w-full rounded-xl border border-border bg-background px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+          className="w-full rounded-xl border border-border bg-background px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-ring mb-4"
         />
 
         {invalidAge ? (

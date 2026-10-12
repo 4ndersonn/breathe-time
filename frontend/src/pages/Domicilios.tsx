@@ -144,19 +144,19 @@ export const Domicilios: React.FC = () => {
 
       {/* KPI Cards in Top */}
       <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-       <Card className="border-white-50/60 bg-orange-60/50 dark:bg-card hover:bg-bg-white/5 group cursor-pointer transition-colors duration-300">
-        <div className="flex items-center justify-between mb-4">
+        <Card>
+          <div className="flex items-center justify-between mb-4">
             <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">Média Global (%)</span>
           </div>
-          <div className="text-2xl font-semibold text-slate-800 dark:text-slate-100">{globalAvg}%</div>
+          <div className="text-2xl font-semibold text-foreground">{globalAvg}%</div>
           <p className="text-xs text-muted-foreground mt-1">Média geral consolidada na base</p>
         </Card>
 
-       <Card className="border-white-50/60 bg-orange-60/50 dark:bg-card hover:bg-bg-white/5 group cursor-pointer transition-colors duration-300">
-        <div className="flex items-center justify-between mb-4">
+        <Card>
+          <div className="flex items-center justify-between mb-4">
             <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">Maior Proporção</span>
           </div>
-          <div className="text-xl font-semibold text-slate-800 dark:text-slate-100 truncate">
+          <div className="text-xl font-semibold text-foreground truncate">
             {maxCountry ? maxCountry.paisPt : 'N/D'}
           </div>
           <div className="text-xs font-bold text-emerald-600 dark:text-emerald-400 mt-1">
@@ -164,11 +164,11 @@ export const Domicilios: React.FC = () => {
           </div>
         </Card>
 
-       <Card className="border-white-50/60 bg-orange-60/50 dark:bg-card hover:bg-bg-white/5 group cursor-pointer transition-colors duration-300">
+        <Card>
           <div className="flex items-center justify-between mb-4">
             <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">Menor Proporção</span>
           </div>
-          <div className="text-xl font-semibold text-slate-800 dark:text-slate-100 truncate">
+          <div className="text-xl font-semibold text-foreground truncate">
             {minCountry ? minCountry.paisPt : 'N/D'}
           </div>
           <div className="text-xs font-bold text-red-600 dark:text-red-400 mt-1">
@@ -176,18 +176,18 @@ export const Domicilios: React.FC = () => {
           </div>
         </Card>
 
-       <Card className="border-white-50/60 bg-orange-60/50 dark:bg-card hover:bg-white/5 group cursor-pointer transition-colors duration-300">
+        <Card>
           <div className="flex items-center justify-between mb-4">
             <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">Países Analisados</span>
           </div>
-          <div className="text-2xl font-semibold text-slate-800 dark:text-slate-100">{totalUniqueCountries} Países</div>
+          <div className="text-2xl font-semibold text-foreground">{totalUniqueCountries} Países</div>
           <p className="text-xs text-muted-foreground mt-1">Cobertura estatística internacional.</p>
         </Card>
       </section>
 
       {/* Filters Bar */}
-     <Card className="border-white-100-50 bg-orange-50/60 dark:bg-card hover:bg-white/5 group cursor-pointer transition-colors duration-300">
-          <div className="flex items-center justify-between mb-4">
+      <Card>
+        <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="relative w-full md:w-96">
             <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
             <input
@@ -203,8 +203,8 @@ export const Domicilios: React.FC = () => {
             <select
               value={selectedAno}
               onChange={(e) => setSelectedAno(e.target.value)}
-               className="px-4 py-2.5 rounded-xl border border-border bg-background text-foreground text-sm focus:outline-none 
-               hover:bg-muted focus:bg-muted dark:hover:bg-white/10 dark:focus:bg-white/10 transition-colors duration-300"            >
+              className="px-4 py-2.5 rounded-xl border border-border bg-background text-foreground text-sm focus:outline-none hover:bg-muted focus:bg-muted transition-colors"
+            >
               <option value="">Todos os Anos (Consolidado)</option>
               {availableYears.map(year => (
                 <option key={year} value={year}>{year}</option>
@@ -224,7 +224,7 @@ export const Domicilios: React.FC = () => {
           <Skeleton className="h-[450px] w-full rounded-2xl" />
         </div>
       ) : viewMode === 'chart' ? (
-         <Card className="border-white-100-50 bg-orange-50/60 dark:bg-card hover:bg-white/5 group cursor-pointer transition-colors duration-300">
+        <Card>
           <div className="flex items-center justify-between mb-4">
             <div>
               <h3 className="text-lg font-semibold tracking-tight">

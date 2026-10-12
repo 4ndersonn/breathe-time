@@ -92,20 +92,20 @@ export const Home: React.FC<HomeProps> = ({ onNavigate }) => {
 
       {/* Insight blocks */}
       <section className="max-w-4xl mx-auto px-4">
-        <div className="rounded-xl border border-border bg-orange-50/60 dark:bg-card divide-y divide-border overflow-hidden">
+        <div className="rounded-2xl border border-border bg-card divide-y divide-border overflow-hidden shadow-sm">
           {insights.map(([number, phrase, context], index) => (
             <motion.div
               key={number}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.1 + index * 0.1 }}
-              whileHover={{ y: -3, backgroundColor: 'rgba(155, 142, 134, 0.06)' }}
+              whileHover={{ y: -3, backgroundColor: 'rgba(41, 41, 35, 0.02)' }}
               className="px-6 py-6 cursor-default"
             >
               <div className="flex gap-6 items-start">
-                <div className="w-1 rounded-full bg-gradient-to-b from-orange-400 to-red-500 self-stretch shrink-0" />
+                <div className="w-1 rounded-full bg-foreground self-stretch shrink-0" />
                 <div>
-                  <div className="text-4xl font-semibold tracking-tight mb-2 bg-gradient-to-r from-orange-400 via-red-500 bg-clip-text text-transparent">
+                  <div className="text-4xl font-semibold tracking-tight mb-2 text-foreground">
                     {number}
                   </div>
                   <p className="text-lg text-foreground font-medium">{phrase}</p>
@@ -124,19 +124,19 @@ export const Home: React.FC<HomeProps> = ({ onNavigate }) => {
 
       {/* Navigation cards */}
       <section className="grid grid-cols-1 md:grid-cols-4 gap-4 max-w-4xl mx-auto px-4">
-        <Card onClick={() => onNavigate('domicilio')} className="border border-border hover:border-outline-400/50 bg-transparent hover:bg-gray-500/5 cursor-pointer transition-all duration-300">
+        <Card onClick={() => onNavigate('domicilio')}>
           <h3 className="font-semibold text-base mb-1">Domicílios</h3>
           <p className="text-xs text-muted-foreground">Análise detalhada por país e ano de moradias unipessoais.</p>
         </Card>
-        <Card onClick={() => onNavigate('suporte')} className="border border-border hover:border-outline-400/50 bg-transparent hover:bg-gray-500/5 cursor-pointer transition-all duration-300">
+        <Card onClick={() => onNavigate('suporte')}>
           <h3 className="font-semibold text-base mb-1">Suporte Social</h3>
           <p className="text-xs text-muted-foreground">Redes de apoio e conexões interpessoais globais.</p>
         </Card>
-        <Card onClick={() => onNavigate('tempo')} className="border border-border hover:border-outline-400/50 bg-transparent hover:bg-gray-500/5 cursor-pointer transition-all duration-300">
+        <Card onClick={() => onNavigate('tempo')}>
           <h3 className="font-semibold text-base mb-1">Tempo Sozinho</h3>
           <p className="text-xs text-muted-foreground">Distribuição horária e categorização por faixa etária.</p>
         </Card>
-        <Card onClick={() => onNavigate('timengine')} className="border border-border hover:border-outline-400/50 bg-transparent hover:bg-gray-500/5 cursor-pointer transition-all duration-300">
+        <Card onClick={() => onNavigate('timengine')}>
           <h3 className="font-semibold text-base mb-1">Motor do Tempo</h3>
           <p className="text-xs text-muted-foreground">Converta anos em segundos, semanas, meses e muito mais.</p>
         </Card>
